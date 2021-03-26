@@ -1,0 +1,44 @@
+{
+    "name": "mrzh-robot-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:nodemon": "NODE_ENV=development nodemon wechaty/index.js",
+        "serve:nodemon": "NODE_ENV=development nodemon server/index.js",
+        "start:dev": "NODE_ENV=production pm2 start wechaty/index.js --name robot --watch",
+        "serve:dev": "NODE_ENV=production pm2 start server/index.js --name robot-server --watch",
+        "start:pro": "NODE_ENV=production pm2 start wechaty/index.js --name robot",
+        "serve:pro": "NODE_ENV=production pm2 start server/index.js --name robot-server"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "babel-cli": "^6.26.0",
+        "file-box": "^0.16.8",
+        "ip": "^1.1.5",
+        "koa": "^2.13.1",
+        "koa-bodyparser": "^4.3.0",
+        "koa-router": "^10.0.0",
+        "koa-static": "^5.0.0",
+        "moment": "^2.29.1",
+        "mongoose": "^5.11.18",
+        "node-schedule": "^2.0.0",
+        "nodemon": "^2.0.7",
+        "pm2": "^4.5.5",
+        "qrcode-terminal": "^0.12.0",
+        "superagent": "^6.1.0",
+        "wechaty": "^0.56.6",
+        "wechaty-puppet": "^0.34.1",
+        "wechaty-puppet-hostie": "^0.12.257"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-plugin-transform-decorators-legacy": "^1.3.5",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "babel-register": "^6.26.0"
+    }
+}
